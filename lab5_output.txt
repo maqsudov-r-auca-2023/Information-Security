@@ -1,0 +1,17 @@
+    1  uname -a
+    2  ls -la
+    3  mkdir -p /vagrant/lab_5
+    4  cd /vagrant/lab_5
+    5  sudo adduser user1
+    6  cat /etc/passwd | grep user1
+    7  ls -l /home
+    8  su - user1
+    9  sudo deluser --remove-home --force user1
+   10  cat /etc/passwd | grep user1
+   11  cat /etc/group
+   12  groups
+   13  sudo groupadd mygroup
+   14  sudo adduser user2
+   15  sudo usermod -aG mygroup user2
+   16  groups user2
+   17  history | tail -n 50 > /vagrant/lab_5/lab5_output.txt
