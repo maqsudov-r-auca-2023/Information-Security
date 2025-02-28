@@ -1,38 +1,22 @@
-import smtplib
-from email.mime.text import MIMEText
 
-# Email details
-sender_email = "your_fake_email@example.com"
-receiver_email = "victim@example.com"
-subject = "Security Alert"
-body = """Dear User,
+# Email content
+subject = "Server Alert"
+body = "This is an automated message from the server."
 
-Your account has been compromised. Please reset your password immediately by clicking here:
+# Sender and recipient
+sender_email = "rahmonbekmaqsudov4164@gmail.com"
+receiver_email = "maqsudov_r@auca.kg"
+password = "Teenwolf4164@$"
 
-http://localhost:8080
+# Set up the MIMEText message
+message = MIMEText(body)
+message["Subject"] = subject
+message["From"] = sender_email
+message["To"] = receiver_email
 
-Regards,
-IT Support"""
-
-# SMTP Server Configuration (use a disposable SMTP server)
-smtp_server = "smtp.gmail.com"
-smtp_port = 587
-smtp_user = "your_fake_email@gmail.com"
-smtp_password = "your_email_password"
-
-# Setup email
-msg = MIMEText(body)
-msg["Subject"] = subject
-msg["From"] = sender_email
-msg["To"] = receiver_email
-
-# Send email
-try:
-    server = smtplib.SMTP(smtp_server, smtp_port)
-    server.starttls()
-    server.login(smtp_user, smtp_password)
-    server.sendmail(sender_email, receiver_email, msg.as_string())
-    server.quit()
-    print("Email sent successfully!")
-except Exception as e:
-    print(f"Error: {e}")
+# Send the email via Gmail's SMTP server (you can change this based on your mail server)
+server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
+server.login(sender_email, password)
+server.sendmail(sender_email, receiver_email, message.as_string())
+server.quit()
+>>>>>>> aecdfbe (Add lab_7: Crontab and Python script for email automation)
