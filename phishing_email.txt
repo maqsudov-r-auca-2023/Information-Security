@@ -1,0 +1,12 @@
+Subject: Security Alert
+From: security@yourcompany.com
+To: victim@example.com
+
+Dear User,
+
+Your account has been compromised. Please reset your password immediately by clicking here: 
+
+http://localhost:8080
+
+Regards,
+IT Support

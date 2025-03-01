@@ -1,0 +1,14 @@
+nginx
+  Depends: libc6
+  Depends: libcrypt1
+  Depends: libpcre2-8-0
+  Depends: libssl3t64
+  Depends: zlib1g
+  Depends: iproute2
+  Depends: nginx-common
+  Breaks: nginx-core
+  Breaks: nginx-extras
+  Breaks: nginx-light
+  Replaces: nginx-core
+  Replaces: nginx-extras
+  Replaces: nginx-light
