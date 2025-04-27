@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # File Integrity Checker
 
@@ -109,3 +110,6 @@ By setting up email notifications, you can have peace of mind that you'll be ale
 ## Author
 
 - **Rahmonbek Maqsudov** – ID: 11244, Group: SFW-122
+=======
+# Information-Security
+>>>>>>> d5b34b51a8a16016c26b3a92badb6f02e67d24a9
